@@ -1,0 +1,415 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #000000 ;
+
+}
+
+
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+
+}
+
+.bubbles{
+    position:relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44 ,
+     0 0 50px #fff, 
+     0 0 100px #fff;   
+    animation: animate 15s linear infinite;
+    animation-duration: calc(500s/var(--speed));
+}
+
+.bubbles span:nth-child(even){
+    background: #ff2d75;
+    box-shadow: 0 0 0 7px #ff2d7544 ,
+     0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
+@keyframes animate{
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+#header {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+ul {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+}
+
+ul li a {
+    position: relative;
+    font-size: 2.5em;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: transparent;
+    -webkit-text-stroke:  1px rgb(255, 255, 255 , 0.5);
+}
+
+ul li a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: var(--clr);
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+    border-right: 8px solid var(--clr);
+    -webkit-text-stroke: 1px var(--clr);
+}
+
+ul li a:hover::before {
+    width: 100%;
+    filter: drop-shadow(0 0 25px var(--clr));
+}
+
+#buttons{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.btn-login{
+    position:relative;
+    background: transparent;
+    border: transparent;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    letter-spacing: 3px;
+    font-size: 24px;
+    text-decoration: none;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.2s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-login:hover{
+    background: var(--color);
+    box-shadow: 0 0 10px var(--color),0 0 30px var(--color),0 0 60px var(--color);
+    transition-delay: 1s;
+    color: #000000;
+}
+
+
+.btn-login span{
+    position: absolute;
+    display: block;
+
+}
+
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color));
+    
+}
+
+.btn-login:hover #span1{
+    left: 100%;
+    transition: 1s;
+}
+#span2{
+    bottom:  0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color));
+    
+}
+
+.btn-login:hover #span2{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+#span3{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--color));
+    
+}
+
+.btn-login:hover #span3{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+    
+}
+#span4{
+    bottom:  -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--color));
+    
+}
+
+.btn-login:hover #span4{
+    bottom:  100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+.funciona {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-bottom: 25px;
+}
+
+#content{
+    
+    position: relative;
+    display: flex;
+
+    
+    width: 600px;
+    height: 300px;
+    margin: 30px 0 20px 0;
+    background-color: rgba(12, 3, 54);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 8px; 
+    overflow: hidden; 
+}
+
+#content::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 600px;
+    height: 300px;
+    background: linear-gradient(0deg,  transparent, #fff, #fff);
+    animation: animation 6s linear infinite;
+    transform-origin: bottom right;
+}
+#content::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 600px;
+    height: 300px;
+    background: linear-gradient(0deg,  transparent, #fff, #fff);
+    animation: animation 6s linear infinite;
+    transform-origin: bottom right;
+    animation-delay: 3s;
+}
+
+
+@keyframes animation{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.form{
+    position: absolute;
+    inset: 2px;
+    background: rgba(12, 3, 54); ;
+    z-index: 10;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form h2{
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-bottom: -5px;
+}
+
+.inputBox{
+    text-align: center;
+    position: relative;
+    margin-top: 25px;
+}
+
+.inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 10px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #000000;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+}
+
+.inputBox span{
+    position: absolute;
+    left: 0;
+    color: #8f8f8f;
+    padding: 10px 0px 10px ;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span{
+    color: #fff;
+    transform: translateX(0px) translateY(-25px);
+    font-size: 0.8em;
+    
+    
+}
+
+.inputBox i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    pointer-events: none;
+    transition: 0.5s;
+    z-index: -8;
+}
+
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i{
+    height: 33px;
+}
+
+.links{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 0.75em;
+  
+ 
+}
+
+.links a{
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.links a:hover{
+    color: #fff;
+}
+
+.but{
+    justify-content: center;
+    text-align: center;
+}
+
+#footer{
+ height: 100px;
+ 
+ width: 100%;
+   
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.icon{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.icon:hover{
+    background-color: #3b5998;
+    box-shadow: 0 0  20px #3b5998;
+}
+
+.icon:hover:nth-child(2){
+    background-color: #ff2d75;
+    box-shadow: 0 0  20px #ff2d75;
+}
+
+.icon:hover:nth-child(3){
+    background-color: #808080;
+    box-shadow: 0 0  20px #808080;
+}
+
+.icon:hover:nth-child(4){
+    background-color: #00acee;
+    box-shadow: 0 0  20px #00acee;
+}
+
+.icon i{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.7rem;
+}
+
+svg circle{
+    stroke-dasharray: 150;
+    transition: all 0.8s ease-in-out;
+}
+.icon:hover circle{
+    stroke-dasharray: 220;
+}

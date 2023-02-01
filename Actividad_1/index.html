@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Aprendiendo CSS</title>
+</head>
+<body>
+    <div class="container">
+        <div class="bubbles">
+            <span style="--speed:23;"></span>
+            <span style="--speed:12;"></span>
+            <span style="--speed:18;"></span>
+            <span style="--speed:15;"></span>
+            <span style="--speed:32;"></span>
+            <span style="--speed:20;"></span>
+            <span style="--speed:10;"></span>
+            <span style="--speed:8;"></span>
+            <span style="--speed:25;"></span>
+            <span style="--speed:30;"></span>
+            <span style="--speed:13;"></span>
+            <span style="--speed:17;"></span>
+            <span style="--speed:14;"></span>
+            <span style="--speed:19;"></span>
+            <span style="--speed:11;"></span>
+            <span style="--speed:9;"></span>
+            <span style="--speed:26;"></span>
+            <span style="--speed:24;"></span>
+            <span style="--speed:22;"></span>
+            <span style="--speed:21;"></span>
+            <span style="--speed:2;"></span>
+            <span style="--speed:16;"></span>
+            <span style="--speed:23;"></span>
+            <span style="--speed:12;"></span>
+            <span style="--speed:18;"></span>
+            <span style="--speed:15;"></span>
+            <span style="--speed:32;"></span>
+            <span style="--speed:20;"></span>
+            <span style="--speed:10;"></span>
+            <span style="--speed:8;"></span>
+            <span style="--speed:25;"></span>
+            <span style="--speed:30;"></span>
+            <span style="--speed:13;"></span>
+            <span style="--speed:17;"></span>
+            <span style="--speed:14;"></span>
+            <span style="--speed:19;"></span>
+            <span style="--speed:11;"></span>
+            <span style="--speed:9;"></span>
+            <span style="--speed:26;"></span>
+            <span style="--speed:24;"></span>
+            <span style="--speed:22;"></span>
+            <span style="--speed:21;"></span>
+            <span style="--speed:2;"></span>
+            <span style="--speed:16;"></span>
+        </div>
+        <div id="header">
+            <ul>
+                <li  style="--clr:#0081B4"><a href="#" data-text="&nbsp;Login">&nbsp;LOGIN</a></li>
+                <li  style="--clr:#FCE22A"><a href="#" data-text="&nbsp;Servicios">&nbsp;SERVICIOS</a></li>
+                <li  style="--clr:#FF1E1E"><a href="#" data-text="&nbsp;Nosotros">&nbsp;NOSOTROS</a></li>
+                <li  style="--clr:#5BB318"><a href="#" data-text="&nbsp;Contacto">&nbsp;CONTACTO</a></li>
+            </ul>
+        </div>
+        <div class="funciona">
+            <div id="content">
+              <div class="form">
+                <h2>Iniciar Sesión</h2>
+                <div class="inputBox">
+                  <input type="text" name="" required="required">
+                  <span>Usuario</span>
+                  <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="password" name="" required="required">
+                    <span>Contraseña</span>
+                    <i></i>
+                </div>
+                <div class="links">
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+                <div class="but">
+                    <button id="login" style="--color:#fff"  class="btn-login color: #fff;" >
+                        <span id="span1"></span>
+                        <span id="span2"></span>
+                        <span id="span3"></span>
+                        <span id="span4"></span>
+    
+                        Iniciar
+                    </button>
+                </div>
+
+
+        </div>
+        </div>
+       
+
+
+    </div>
+    <div id="buttons">   
+        <button id="login" style="--color:#a945c7" onclick="document.getElementById('loginCard').style.zIndex=3;document.getElementById('signupCard').style.zIndex=2;" class="btn-login" >
+            <span id="span1"></span>
+            <span id="span2"></span>
+            <span id="span3"></span>
+            <span id="span4"></span>
+            Login 
+        </button>
+        <button id="sign"style="--color:#3EC70B"  onclick="document.getElementById('signupCard').style.zIndex=3;document.getElementById('loginCard').style.zIndex=2; " class="btn-login">
+            <span id="span1"></span>
+            <span id="span2"></span>
+            <span id="span3"></span>
+            <span id="span4"></span>
+            Sign Up 
+        </button>
+
+    </div>
+  
+    <div id="footer">
+        <div class="icon">
+            <svg heigth="80" width="80">
+                <circle cx="40" cy="40" r="35" stroke="white" stroke-width="4" fill="none"  />
+            </svg>
+            <a href="https://es-la.facebook.com/" target="_blank"><i class='bx bxl-facebook' ></i></a>
+        </div>
+        <div class="icon">
+            <svg heigth="80" width="80">
+                <circle cx="40" cy="40" r="35" stroke="white" stroke-width="4" fill="none"  />
+            </svg>
+           <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram' ></i></a>
+        </div>
+        <div class="icon">
+            <svg heigth="80" width="80">
+                <circle cx="40" cy="40" r="35" stroke="white" stroke-width="4" fill="none"  />
+            </svg>
+            <a href="https://github.com/MadLies" target="_blank"><i class='bx bxl-github'></i></a>
+        </div>
+        <div class="icon">
+            <svg heigth="80" width="80">
+                <circle cx="40" cy="40" r="35" stroke="white" stroke-width="4" fill="none"  />
+            </svg>
+           <a href="https://twitter.com/explore" target="_blank"><i class='bx bxl-twitter' ></i></a> 
+        </div>
+    </div>
+    
+    
+</body>
+
+</html>
